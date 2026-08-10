@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>名古屋家族6日遊隨身手冊</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap');
+        body { font-family: 'Noto Sans TC', sans-serif; background-color: #f3f4f6; padding-bottom: 80px; }
+        .tab-content { display: none; animation: fadeIn 0.3s; }
+        .tab-content.active { display: block; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+        /* 地鐵顏色標籤 */
+        .badge-m { background-color: #9333ea; color: white; } /* 名城線 紫色 */
+        .badge-h { background-color: #eab308; color: white; } /* 東山線 黃色 */
+        .badge-jr { background-color: #f97316; color: white; } /* JR 橘色 */
+        .badge-bus { background-color: #10b981; color: white; } /* 巴士 綠色 */
+    </style>
+</head>
+<body>
+
+    <!-- 頂部標題 -->
+    <header class="bg-white shadow-sm sticky top-0 z-10 px-4 py-3">
+        <h1 class="text-xl font-bold text-gray-800 text-center">🏯 名古屋家族 6 日遊</h1>
+        <p class="text-xs text-center text-gray-500 mt-1">住宿：金山 ANA 皇冠假日酒店 (Day1-3, 5)</p>
+    </header>
+
+    <!-- 內容區域 -->
+    <main class="p-4 max-w-lg mx-auto" id="app">
+        
+        <!-- Dashboard 總覽 -->
+        <section id="tab-0" class="tab-content active">
+            <div class="bg-white rounded-xl shadow p-4 mb-4">
+                <h2 class="font-bold text-lg mb-3">✅ 必吃美食打卡清單</h2>
+                <p class="text-xs text-gray-500 mb-3">點擊打勾，紀錄旅途美味！(自動記憶)</p>
+                <div class="space-y-2 text-sm" id="food-checklist">
+                    <label class="flex items-center space-x-3 p-2 bg-gray-50 rounded"><input type="checkbox" class="w-5 h-5 rounded text-blue-500" data-id="food1"><span>🍗 世界的山將 - 炸雞翅 (Day 1)</span></label>
+                    <label class="flex items-center space-x-3 p-2 bg-gray-50 rounded"><input type="checkbox" class="w-5 h-5 rounded text-blue-500" data-id="food2"><span>🍞 Tsubame Bread 厚吐司 (Day 2)</span></label>
+                    <label class="flex items-center space-x-3 p-2 bg-gray-50 rounded"><input type="checkbox" class="w-5 h-5 rounded text-blue-500" data-id="food3"><span>🍜 一蘭拉麵 榮店 (Day 2)</span></label>
+                    <label class="flex items-center space-x-3 p-2 bg-gray-50 rounded"><input type="checkbox" class="w-5 h-5 rounded text-blue-500" data-id="food4"><span>🐷 矢場とん 味噌豬排總店 (Day 3)</span></label>
+                    <label class="flex items-center space-x-3 p-2 bg-gray-50 rounded"><input type="checkbox" class="w-5 h-5 rounded text-blue-500" data-id="food5"><span>🍣 飛驒牛握壽司 (Day 4)</span></label>
+                    <label class="flex items-center space-x-3 p-2 bg-gray-50 rounded"><input type="checkbox" class="w-5 h-5 rounded text-blue-500" data-id="food6"><span>🥩 馬喰一代 頂級飛驒牛燒肉 (Day 5)</span></label>
+                    <label class="flex items-center space-x-3 p-2 bg-gray-50 rounded"><input type="checkbox" class="w-5 h-5 rounded text-blue-500" data-id="food7"><span>🍱 熱田蓬萊軒 鰻魚飯三吃 (Day 6)</span></label>
+                </div>
+            </div>
+            
+            <div class="bg-yellow-50 border-l-4 border-yellow-400 p-3 rounded text-sm text-gray-700">
+                <span class="font-bold">⚠️ Day 4 輕裝物流提醒：</span><br>
+                早上請將大行李寄放於金山飯店櫃檯，僅攜帶兩天一夜背包前往高山，減少搭乘巴士負擔。
+            </div>
+        </section>
+
+        <!-- Day 1 -->
+        <section id="tab-1" class="tab-content">
+            <h2 class="font-bold text-xl mb-4 text-blue-600">Day 1：抵達與市區夜景</h2>
+            <div class="border-l-2 border-gray-300 ml-3 pl-4 space-y-6 relative">
+                <div>
+                    <span class="absolute -left-2.5 bg-blue-500 w-5 h-5 rounded-full border-4 border-white"></span>
+                    <p class="font-bold">15:30 抵達機場</p>
+                    <p class="text-sm text-gray-600">搭乘 <span class="badge-jr px-1 rounded">名鐵特急</span> (約30分) 直達金山站。抵達飯店寄放行李。</p>
+                </div>
+                <div>
+                    <span class="absolute -left-2.5 bg-purple-500 w-5 h-5 rounded-full border-4 border-white"></span>
+                    <p class="font-bold">18:15 綠洲 21 看夜景 🌃</p>
+                    <p class="text-sm text-gray-600"><span class="badge-m px-1 rounded">M01 金山</span> 搭名城線 ➔ <span class="badge-m px-1 rounded">M05 榮</span><br>免轉車，上樓欣賞宇宙船與電視塔夜景。</p>
+                </div>
+                <div>
+                    <span class="absolute -left-2.5 bg-orange-400 w-5 h-5 rounded-full border-4 border-white"></span>
+                    <p class="font-bold">19:30 晚餐：手羽先 (炸雞翅) 🍗</p>
+                    <p class="text-sm text-gray-600">榮商圈周邊享用「世界的山將」或「風來坊」。餐後搭名城線回金山休息。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Day 2 -->
+        <section id="tab-2" class="tab-content">
+            <h2 class="font-bold text-xl mb-4 text-green-600">Day 2：吉卜力與雙塔購物</h2>
+            <div class="border-l-2 border-gray-300 ml-3 pl-4 space-y-6 relative">
+                <div>
+                    <span class="absolute -left-2.5 bg-green-500 w-5 h-5 rounded-full border-4 border-white"></span>
+                    <p class="font-bold">07:45 出發與人氣早餐 🍞</p>
+                    <p class="text-sm text-gray-600">
+                        <span class="badge-m px-1 rounded">M01 金山</span> ➔ 本山 ➔ <span class="badge-h px-1 rounded">H22 藤丘</span> ➔ 轉乘 Linimo。<br>
+                        於「杁ヶ池公園站」下車吃 <strong>Tsubame Bread & Milk</strong>。
+                    </p>
+                </div>
+                <div>
+                    <span class="absolute -left-2.5 bg-green-500 w-5 h-5 rounded-full border-4 border-white"></span>
+                    <p class="font-bold">10:15 吉卜力公園 🌳</p>
+                    <p class="text-sm text-gray-600">Linimo 抵達「愛・地球博紀念公園站」。全日沉浸於奇幻動畫世界。</p>
+                </div>
+                <div>
+                    <span class="absolute -left-2.5 bg-yellow-500 w-5 h-5 rounded-full border-4 border-white"></span>
+                    <p class="font-bold">16:30 榮商圈：雙塔購物 🛍️</p>
+                    <p class="text-sm text-gray-600">
+                        搭 Linimo 回藤丘 ➔ <span class="badge-h px-1 rounded">H10 榮</span>。<br>
+                        連逛 <strong>Alpen NAGOYA</strong> (運動/露營) 與 <strong>HAERA</strong> (精品/始祖鳥)。
+                    </p>
+                </div>
+                <div>
+                    <span class="absolute -left-2.5 bg-red-500 w-5 h-5 rounded-full border-4 border-white"></span>
+                    <p class="font-bold">19:30 晚餐：一蘭拉麵 🍜</p>
+                    <p class="text-sm text-gray-600">於榮商圈享用客製化豚骨拉麵。餐後搭 <span class="badge-m px-1 rounded">M05 榮</span> 直達回金山。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Day 3 -->
+        <section id="tab-3" class="tab-content">
+            <h2 class="font-bold text-xl mb-4 text-red-500">Day 3：熱血賽道與次文化</h2>
+            <div class="border-l-2 border-gray-300 ml-3 pl-4 space-y-6 relative">
+                <div>
+                    <span class="absolute -left-2.5 bg-red-500 w-5 h-5 rounded-full border-4 border-white"></span>
+                    <p class="font-bold">09:00 鈴鹿賽道樂園 🏎️</p>
+                    <p class="text-sm text-gray-600">金山 ➔ 名古屋 ➔ <span class="badge-jr px-1 rounded">近鐵特急</span> 至「白子站」➔ 三重交通巴士。<br>體驗卡丁車與特製駕照挑戰！</p>
+                </div>
+                <div>
+                    <span class="absolute -left-2.5 bg-purple-500 w-5 h-5 rounded-full border-4 border-white"></span>
+                    <p class="font-bold">17:00 大須商店街 🏮</p>
+                    <p class="text-sm text-gray-600">搭車回市區，前往上前津站/大須觀音站。邊走邊吃、買扭蛋與動漫周邊。</p>
+                </div>
+                <div>
+                    <span class="absolute -left-2.5 bg-orange-500 w-5 h-5 rounded-full border-4 border-white"></span>
+                    <p class="font-bold">18:45 晚餐：矢場味噌豬排 🐷</p>
+                    <p class="text-sm text-gray-600">大須往東走到底抵達總店。餐後由 <span class="badge-m px-1 rounded">M04 矢場町</span> 回金山。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Day 4 -->
+        <section id="tab-4" class="tab-content">
+            <h2 class="font-bold text-xl mb-4 text-orange-600">Day 4：阿爾卑斯山城 (輕裝)</h2>
+            <div class="border-l-2 border-gray-300 ml-3 pl-4 space-y-6 relative">
+                <div>
+                    <span class="absolute -left-2.5 bg-bus w-5 h-5 rounded-full border-4 border-white" style="background-color: #10b981;"></span>
+                    <p class="font-bold">07:30 出發前往高山 🚌</p>
+                    <p class="text-sm text-gray-600">大行李放金山。搭至「名鐵巴士中心」搭乘高速巴士，車上補眠。</p>
+                </div>
+                <div>
+                    <span class="absolute -left-2.5 bg-orange-400 w-5 h-5 rounded-full border-4 border-white"></span>
+                    <p class="font-bold">11:30 高山老街 🏘️</p>
+                    <p class="text-sm text-gray-600">漫步江戶老街，午餐必吃飛驒牛握壽司與高山拉麵。</p>
+                </div>
+                <div>
+                    <span class="absolute -left-2.5 bg-green-600 w-5 h-5 rounded-full border-4 border-white"></span>
+                    <p class="font-bold">13:50 白川鄉合掌村 🛖</p>
+                    <p class="text-sm text-gray-600">於巴士中心轉乘濃飛巴士，探索世界遺產童話村落。傍晚搭車回高山入住溫泉飯店。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Day 5 -->
+        <section id="tab-5" class="tab-content">
+            <h2 class="font-bold text-xl mb-4 text-teal-600">Day 5：上高地仙境與頂級燒肉</h2>
+            <div class="border-l-2 border-gray-300 ml-3 pl-4 space-y-6 relative">
+                <div>
+                    <span class="absolute -left-2.5 bg-teal-500 w-5 h-5 rounded-full border-4 border-white"></span>
+                    <p class="font-bold">08:30 上高地健行 🌲</p>
+                    <p class="text-sm text-gray-600">高山 ➔ 平湯溫泉 ➔ 上高地。平緩步道散步至河童橋，大口呼吸芬多精。</p>
+                </div>
+                <div>
+                    <span class="absolute -left-2.5 bg-bus w-5 h-5 rounded-full border-4 border-white" style="background-color: #10b981;"></span>
+                    <p class="font-bold">16:00 高速巴士回市區 🚌</p>
+                    <p class="text-sm text-gray-600">循原路回高山，轉乘高速巴士一路睡回名古屋「名鐵巴士中心」。</p>
+                </div>
+                <div>
+                    <span class="absolute -left-2.5 bg-red-600 w-5 h-5 rounded-full border-4 border-white"></span>
+                    <p class="font-bold">19:15 晚餐：馬喰一代 名古屋WEST 🥩</p>
+                    <p class="text-sm text-gray-600">步行2分至餐廳，享用頂級飛驒牛燒肉大餐！餐後從名古屋站搭 1 站回金山，領行李重新入住。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Day 6 -->
+        <section id="tab-6" class="tab-content">
+            <h2 class="font-bold text-xl mb-4 text-indigo-600">Day 6：雙地標與從容賦歸</h2>
+            <div class="border-l-2 border-gray-300 ml-3 pl-4 space-y-6 relative">
+                <div>
+                    <span class="absolute -left-2.5 bg-purple-500 w-5 h-5 rounded-full border-4 border-white"></span>
+                    <p class="font-bold">09:30 名古屋城 🏯</p>
+                    <p class="text-sm text-gray-600">退房寄行李。<span class="badge-m px-1 rounded">M01 金山</span> ➔ <span class="badge-m px-1 rounded">M07 名古屋城</span>。參觀巨型金鯱與本丸御殿。</p>
+                </div>
+                <div>
+                    <span class="absolute -left-2.5 bg-orange-600 w-5 h-5 rounded-full border-4 border-white"></span>
+                    <p class="font-bold">12:00 晚餐：熱田蓬萊軒 鰻魚飯 🍱</p>
+                    <p class="text-sm text-gray-600"><span class="badge-m px-1 rounded">M27 神宮西</span>。品嚐極品鰻魚飯三吃。</p>
+                </div>
+                <div>
+                    <span class="absolute -left-2.5 bg-green-600 w-5 h-5 rounded-full border-4 border-white"></span>
+                    <p class="font-bold">13:30 熱田神宮 ⛩️</p>
+                    <p class="text-sm text-gray-600">漫步古老巨木森林散步祈福。隨後回金山 ASUNAL 做最後採買。</p>
+                </div>
+                <div>
+                    <span class="absolute -left-2.5 bg-blue-500 w-5 h-5 rounded-full border-4 border-white"></span>
+                    <p class="font-bold">18:30 機場：FLIGHT OF DREAMS ✈️</p>
+                    <p class="text-sm text-gray-600">回飯店拿行李，搭名鐵直達機場。看波音 787 飛機，搭乘 21:00 班機返家！</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 底部導覽列 -->
+    <nav class="bg-white border-t border-gray-200 fixed bottom-0 w-full z-10 flex overflow-x-auto text-xs font-bold shadow-[0_-2px_10px_rgba(0,0,0,0.05)]">
+        <button class="nav-btn flex-shrink-0 px-4 py-3 text-blue-600 border-b-2 border-blue-600 bg-blue-50" data-target="tab-0">📋 總覽</button>
+        <button class="nav-btn flex-shrink-0 px-4 py-3 text-gray-500 hover:text-blue-500" data-target="tab-1">D1 抵達</button>
+        <button class="nav-btn flex-shrink-0 px-4 py-3 text-gray-500 hover:text-blue-500" data-target="tab-2">D2 吉卜力</button>
+        <button class="nav-btn flex-shrink-0 px-4 py-3 text-gray-500 hover:text-blue-500" data-target="tab-3">D3 鈴鹿</button>
+        <button class="nav-btn flex-shrink-0 px-4 py-3 text-gray-500 hover:text-blue-500" data-target="tab-4">D4 高山</button>
+        <button class="nav-btn flex-shrink-0 px-4 py-3 text-gray-500 hover:text-blue-500" data-target="tab-5">D5 上高地</button>
+        <button class="nav-btn flex-shrink-0 px-4 py-3 text-gray-500 hover:text-blue-500" data-target="tab-6">D6 賦歸</button>
+    </nav>
+
+    <script>
+        // 切換 Tab 功能
+        const navBtns = document.querySelectorAll('.nav-btn');
+        const tabs = document.querySelectorAll('.tab-content');
+
+        navBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // 移除所有 active 狀態
+                navBtns.forEach(b => {
+                    b.classList.remove('text-blue-600', 'border-b-2', 'border-blue-600', 'bg-blue-50');
+                    b.classList.add('text-gray-500');
+                });
+                tabs.forEach(t => t.classList.remove('active'));
+
+                // 啟用當前點擊的 Tab
+                btn.classList.remove('text-gray-500');
+                btn.classList.add('text-blue-600', 'border-b-2', 'border-blue-600', 'bg-blue-50');
+                document.getElementById(btn.dataset.target).classList.add('active');
+            });
+        });
+
+        // 儲存核取方塊狀態到 LocalStorage
+        const checkboxes = document.querySelectorAll('#food-checklist input[type="checkbox"]');
+        checkboxes.forEach(box => {
+            const savedState = localStorage.getItem(box.dataset.id);
+            if (savedState === 'true') box.checked = true;
+
+            box.addEventListener('change', () => {
+                localStorage.setItem(box.dataset.id, box.checked);
+            });
+        });
+    </script>
+</body>
+</html>
